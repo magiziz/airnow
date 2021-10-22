@@ -1,45 +1,31 @@
-**Edit a file, create a new file, and clone from Bitbucket in under 2 minutes**
+# Airnow FE Tech Test
 
-When you're done, you can delete the content in this README and update the file with details for others getting started with your repository.
+## Task	
+We would like you to demonstrate, using a technology of your choice, how to fetch and manipulate data in a json format and then present that to a user.
 
-*We recommend that you open this README in another tab as you perform the tasks below. You can [watch our video](https://youtu.be/0ocf7u76WSo) for a full demo of all the steps in this tutorial. Open the video in a new tab to avoid leaving Bitbucket.*
+Given the two datasets in this repository, create a Javascript project that creates a component similar to the wire frame provided.
 
----
+This task should take you somewhere from a few hours to a day. Please don’t take any more time than this, we are more interested in your approach than completing the task.  
 
-## Edit a file
+Please look at the mockup provided and decide how best to approach this problem.
 
-You’ll start by editing this README file to learn how to edit a file in Bitbucket.
+## Acceptance Criteria
+Some basic acceptance criteria is as below:
 
-1. Click **Source** on the left side.
-2. Click the README.md link from the list of files.
-3. Click the **Edit** button.
-4. Delete the following text: *Delete this line to make a change to the README from Bitbucket.*
-5. After making your change, click **Commit** and then **Commit** again in the dialog. The commit page will open and you’ll see the change you just made.
-6. Go back to the **Source** page.
+1. Given I load the component I am presented with a list of installed SDK’s.
+2. Given the component is loaded, and ‘Installed’ is selected, when I click the “uninstalled” button, the application will render the list of uninstalled SDK’s.
+3. Given the component is loaded, and ‘Uninstalled’ is selected, when I click the “installed” button, the application will render the list of installed SDK’s.
+4. Given the list is rendered I would like to see the SDK’s grouped into their categories.
+5. Given the component is loaded I would like to see the last seen date for each SDK in a human readable format.
+6. Given the component is loaded I would like to see the latest updated date in the format provided in the wire frame.
+7. Given the component is loaded I would like to see the total count of SDK’s.
 
----
+## Outcomes
+Some things we would like to see:
 
-## Create a file
+- Frequent commits.
+- Some testing implementation.
+- A choice of application state (context, redux etc)
+- Some UI decisions being made, a UI wire frame has been provided but feel free to add your own framework or styles.
 
-Next, you’ll add a new file to this repository.
-
-1. Click the **New file** button at the top of the **Source** page.
-2. Give the file a filename of **contributors.txt**.
-3. Enter your name in the empty file space.
-4. Click **Commit** and then **Commit** again in the dialog.
-5. Go back to the **Source** page.
-
-Before you move on, go ahead and explore the repository. You've already seen the **Source** page, but check out the **Commits**, **Branches**, and **Settings** pages.
-
----
-
-## Clone a repository
-
-Use these steps to clone from SourceTree, our client for using the repository command-line free. Cloning allows you to work on your files locally. If you don't yet have SourceTree, [download and install first](https://www.sourcetreeapp.com/). If you prefer to clone from the command line, see [Clone a repository](https://confluence.atlassian.com/x/4whODQ).
-
-1. You’ll see the clone button under the **Source** heading. Click that button.
-2. Now click **Check out in SourceTree**. You may need to create a SourceTree account or log in.
-3. When you see the **Clone New** dialog in SourceTree, update the destination path and name if you’d like to and then click **Clone**.
-4. Open the directory you just created to see your repository’s files.
-
-Now that you're more familiar with your Bitbucket repository, go ahead and add a new file locally. You can [push your change back to Bitbucket with SourceTree](https://confluence.atlassian.com/x/iqyBMg), or you can [add, commit,](https://confluence.atlassian.com/x/8QhODQ) and [push from the command line](https://confluence.atlassian.com/x/NQ0zDQ).
+It’s up to you what technology you want to use to achieve this. Our current stack is using React and GraphQL but we are more interested in your approach to solving the task given to you. 
