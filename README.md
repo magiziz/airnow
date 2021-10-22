@@ -1,4 +1,6 @@
 # Airnow FE Tech Test
+
+## Submission Guideline
 Please fork this repository. when you have finished your work please provide a link to your own repository. You are also welcome to host this on Github if you don't have a Bitbucket account. 
 ## Task	
 We would like you to demonstrate, using a technology of your choice, how to fetch and manipulate data in a json format and then present that to a user.
