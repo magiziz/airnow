@@ -82,6 +82,7 @@
         "__typename": "Sdk"
       }
     ],
+    "latestUpdatedDate": "2019-07-16T13:24:39.000-07:00",
     "__typename": "SdkOverview"
   }
 }
