@@ -1,13 +1,17 @@
 import React from "react";
 import * as S from "./styles";
 
-const SDK = ({ name, lastSeenDate }) => {
+const SDK = ({ name, sdk_items }) => {
   return (
     <S.SDK>
       <S.SDKTitle>{name}</S.SDKTitle>
-      <S.SDKDate>
-        {`SDK`}&nbsp;{lastSeenDate}
-      </S.SDKDate>
+      {sdk_items.length
+        ? sdk_items.map(({ lastSeenDate }) => (
+            <S.SDKDate>
+              {`SDK`}&nbsp;{lastSeenDate}
+            </S.SDKDate>
+          ))
+        : null}
     </S.SDK>
   );
 };

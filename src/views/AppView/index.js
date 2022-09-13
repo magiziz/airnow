@@ -22,7 +22,7 @@ const AppView = () => {
       </S.ButtonSelectContainer>
 
       {/*SDK Table Component*/}
-      <SDKTable />
+      <SDKTable isInstalled={isInstalled} />
     </S.App>
   );
 };
