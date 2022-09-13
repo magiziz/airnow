@@ -1,11 +1,8 @@
 import React from "react";
+import AppView from "./views/AppView";
 
 const App = () => {
-  return (
-    <div>
-      <h1>123</h1>
-    </div>
-  );
+  return <AppView />;
 };
 
 export default App;
