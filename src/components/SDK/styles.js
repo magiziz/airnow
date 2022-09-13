@@ -1,9 +1,10 @@
 import styled from "styled-components";
 
 export const SDK = styled.div`
-  display: flex;
+  display: inline-block;
   flex-direction: column;
   margin-top: 16px;
+  width: 100%;
 `;
 
 export const SDKTitle = styled.h1`

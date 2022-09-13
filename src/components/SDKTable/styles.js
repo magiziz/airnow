@@ -26,6 +26,6 @@ export const SDKTitleContainer = styled.div`
 `;
 
 export const SDKGridTable = styled.div`
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-count: 2;
+  column-gap: 0;
 `;

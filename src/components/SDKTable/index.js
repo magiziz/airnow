@@ -3,20 +3,32 @@ import * as S from "./styles";
 import SDK from "../../components/SDK";
 import installed from "../../helpers/json/installed.json";
 import uninstalled from "../../helpers/json/uninstalled.json";
+import moment from "moment";
 
 // This is SDK Table. It represents a table for SDK's
 const SDKTable = ({ isInstalled }) => {
   // useState - React Hook
   // We will use useState here to get array of grouped SDK's
   const [sdk, setSDK] = useState([]);
+  const [totalSDK, setTotalSDK] = useState([]);
 
   // Rendering SDK data based on what option user chooses
   const sdkData = isInstalled
     ? installed.data.installedSdks
     : uninstalled.data.uninstalledSdks;
 
+  // Rendering SDK date
+  const sdkDate = isInstalled
+    ? installed.data.latestUpdatedDate
+    : uninstalled.data.latestUpdatedDate;
+
+  // Format latest updated date
+  const format = moment(sdkDate).format("MMMM Do YYYY");
+
   useEffect(() => {
+    // We will let because it's easier to push stuff there and then update with useState
     let groups = [];
+    let sdks = [];
 
     const groupCategoriesTogether = () => {
       sdkData.map((sdk) => {
@@ -53,19 +65,31 @@ const SDKTable = ({ isInstalled }) => {
         }
       });
 
+      // See how many total SDK there are and push them into sdks array
+      groups.map((group) => {
+        group.sdk_items.map((sdk) => {
+          sdks.push(sdk);
+        });
+      });
+
+      // Finally! We can set useState() :)
+      setTotalSDK(sdks);
       setSDK(groups);
     };
 
     groupCategoriesTogether();
   }, [isInstalled]);
-  console.log("sdk", sdk);
+
   return (
     <S.SDKTable>
       <S.SDKTitleContainer>
         <S.SDKTitle>{`Installed SDK's`}</S.SDKTitle>
-        <S.SDKTitle>{10}</S.SDKTitle>
+        <S.SDKTitle>{totalSDK.length}</S.SDKTitle>
       </S.SDKTitleContainer>
-      <S.SDKDate>{`Latest update`}</S.SDKDate>
+      <S.SDKDate>
+        {`Latest update:`}&nbsp;
+        {format}
+      </S.SDKDate>
 
       {/*Rendering all SDK's here*/}
       <S.SDKGridTable>
